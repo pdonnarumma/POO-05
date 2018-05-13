@@ -9,7 +9,7 @@
    {
        logado = true;
    }
-   
+      
 %>    
 <html>
     <head>
@@ -33,6 +33,7 @@
         <%}
         else{%>
             <h2>Logue primeiro para acessar o Quiz</h2>
+            <h2><a href="login.jsp">Entrar</a></h2>
         <%}%>
     </body>
 </html>

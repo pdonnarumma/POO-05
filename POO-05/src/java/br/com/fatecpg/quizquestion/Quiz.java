@@ -5,15 +5,15 @@ import java.util.Collections;
 
 
 public class Quiz {
-    private static ArrayList<Questions> test;
-    private static ArrayList<Questions> randomtest;
+    public static ArrayList<Questions> test;
+    public static ArrayList<Questions> randomtest;
     public static ArrayList<Questions> getTest()
     {
-        if(test == null)
+        if(randomtest == null)
         {
             randomtest = new ArrayList<>();
             test = new ArrayList<>();
-             
+            
             randomtest.add(new Questions("1+2", "3", new String[]{"1","2","3"}));
             randomtest.add(new Questions("1+3", "4", new String[]{"1","2","4"}));
             randomtest.add(new Questions("1+4", "5", new String[]{"1","3","5"}));
@@ -31,12 +31,15 @@ public class Quiz {
 
                 test.add(randomtest.get(i));
 
-            }
+            }  
             
-            
+                        
         }
+            
+            
         
     return test;
     }
     
+
 }

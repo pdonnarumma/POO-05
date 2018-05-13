@@ -61,7 +61,8 @@
         <h2><a href="quiz.jsp">Realizar Quiz</a></h2>
         <%}
         else{%>
-        <h2>Logue primeiro para acessar o Quiz</h2>
+        <h2>Logue primeiro para acessar o Perfil</h2>
+        <h2><a href="login.jsp">Entrar</a></h2>
         <%}%>
         <h2><a href="ultimostestes.jsp">Últimos Testes</a></h2>
     </body>
