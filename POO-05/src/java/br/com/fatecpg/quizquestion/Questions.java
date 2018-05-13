@@ -1,10 +1,8 @@
 package br.com.fatecpg.quizquestion;
 
-/**
- *
- * @author pdonnarumma
- */
+
 public class Questions {
+    
     private String question;
     private String aswer;
     private String[] alternatives;

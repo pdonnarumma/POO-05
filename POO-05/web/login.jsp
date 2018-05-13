@@ -1,7 +1,5 @@
 <%@page import="br.com.fatecpg.quizquestion.Login"%>
 <%@page import="br.com.fatecpg.quizquestion.Logout"%>
-<%@page import="br.com.fatecpg.quizquestion.Quiz"%>
-<%@page import="br.com.fatecpg.quizquestion.Questions"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <% 
@@ -11,7 +9,7 @@
    {
        logado = true;
    }
-   
+
 %>    
 <html>
     <head>
@@ -20,19 +18,15 @@
     </head>
     <body>
         <h1>Web Quiz</h1>
-       
-       <%if(logado == false)
-    {%>
-
-        <h2><a href="login.jsp">Entrar</a></h2>
-
-    <%}
-
-    else{%>
-
-        <h2><a href="Logout">Sair</a></h2>
-
-    <%}%> 
-    <h2><a href="ultimostestes.jsp">Últimos Testes</a></h2>
+        <% if (logado == false) {%>
+        <form action="Login" method="post">
+         Name:<input type="text" name="name"><br>
+        <input type="submit" value="submit">
+        </form>
+        <%}
+        else{%>
+        <h2>Você já está logado!!!</h2>
+        <h2><a href="quiz.jsp">Realizar Quiz</a></h2>
+        <%}%>
     </body>
 </html>
