@@ -1,0 +1,10 @@
+<!-- Footer
+ ================================================== -->
+
+
+ <footer>
+            <div style = "height: 180px; width: 100%; background: rgb(179, 209, 255); box-shadow: 15px 10px 10px black; margin-top: 670px;">
+                <p style = "text-align: center; padding-top: 60px; font-size: 18px; color: black;"> Space Quiz | FATEC 4º Ciclo ADS de 2018</p>
+            </div>
+</footer>
+<script src="js/config.js"></script>

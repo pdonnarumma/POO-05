@@ -1,0 +1,300 @@
+header ul li{
+    font-size: 18px;
+    display: inline-block;
+    list-style: none;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.menu{
+    height: 90px;
+    width: 100%;
+    background: rgb(236,240,241);
+    box-shadow: 1px 1px  20px gray;
+    
+}
+
+header ul img{
+   display: inline-block;
+    padding-top: 10px;
+    margin-right: 10px;
+    width: 200px;
+    height: 80px;
+    
+}
+
+header ul li a{
+    text-decoration: none;
+     color: gray;
+    
+}
+
+
+
+/* corpo da pagina inicial*/
+.img1,.img2{
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    opacity: 0.2;
+}
+
+.img1{
+   left: -502px;
+}
+.img2{
+   left: 530px;
+}
+
+
+.caixa{
+    width: 60%;
+    height: 600px;
+    background: rgba(255,255,255,0.5);
+    margin-left: 20%;
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 30px;
+    
+    display: none;
+    position: absolute;
+    top: -650px;
+    
+}
+
+.caixa a{
+  border: 8px solid   rgb(130,14,15);
+  padding: 15px 40px;
+  color:  rgb(130,14,15);
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 40%;
+  position: relative;
+  top: 40px; 
+    border-radius: 10px;
+    box-shadow: 4px 5px 3px gray;
+    text-shadow: 1px 2px 2px  black;
+    
+}
+
+.caixa a:hover {
+  color: #ffcc00;
+  border: 8px solid #ffcc00;;
+    box-shadow: 2px 2px 3px black;
+    text-shadow: 1px 1px 2px  black;
+    transition: 0.5s;
+}
+
+
+.caixa p{
+    font-family: "Segoe UI";
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffcc00;
+    text-shadow: 3px 2px 4px black;
+    padding-left: 80px;
+   
+   
+    
+}
+.caixa .msg{
+    font-family: "Segoe UI";
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.conteudo-caixa{
+    margin-top: 15%;
+    height: 290px;
+}
+
+
+/* pagina login de usuario*/
+.caixa .user{
+    opacity: 0.7;
+    position: relative;
+    left: 295px;
+    top: 40px;
+    width: 230px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 22px black;
+}
+
+.caixa .usuario-input label{
+    font-family: "Segoe UI";
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffcc00;
+    text-shadow: 3px 2px 4px black;
+}
+.caixa .usuario-input input{
+    width: 80%;
+}
+.usuario-input{
+    position: relative;
+    left: 30%;
+    width: 50%;
+    margin-top: 60px;
+
+}
+
+.usuario-input input{
+    border: solid #e6b800;  
+        background:	 #e6e6e6;
+}
+
+.usuario-input .btn-login{
+    position: relative;
+    right: 70px;
+    
+}
+
+.caixa-pontuacao{
+    height: 600px;
+}
+
+.usuario-input .btn-login:hover{
+   color: #ffcc00;
+  border: 8px solid  #ffcc00;
+    box-shadow: 2px 2px 3px black;
+    text-shadow: 1px 1px 2px  black;
+    transition: 0.5s;
+}
+
+
+/* TITULO PONTUAÇÃO */
+.titulo-pontuacao{
+   margin-left: 90px;
+}
+
+.tabela-pontuacao tr th{
+    background: #d9d9d9;
+    color: #ffcc00;
+    text-shadow: 1px 1px 2px black;
+    font-size: 20px;
+}
+
+.tabela-pontuacao tr td{
+    color: #f2f2f2;
+    
+}
+
+.botoes-pt{
+    
+    width: 420px;
+    position: absolute;
+    bottom: -30px;
+    left: 350px;
+    
+}
+.btn-pt{
+    margin-right: 10px;
+    border: 3px solid   #1a75ff;
+  padding: 0 5px 0 5px;
+  color:  #bfbfbf;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+    border-radius: 1px;
+    box-shadow: 4px 5px 3px gray;
+    text-shadow: 1px 2px 2px  black;
+    
+    
+}
+.btn-pt:hover{
+    text-decoration: none;
+    color: #d9d9d9;
+    transition: 0.5s;
+}
+
+
+
+/* PAGINA SOBRE*/
+
+.caixa-sobre{
+    position: absolute;
+    background: rgba(236,240,241,0.6);
+    height: 630px;
+    left: 110px;
+    margin-top: 20px;
+    border-radius: 20px;
+    
+     display: none;
+    position: absolute;
+    top: -650px;
+    
+}
+.equipe h1{
+    text-align: center;
+    position: relative;
+    top: 20px;
+    height: 40px;
+    color:  #bfbfbf;
+    font-family:sans-serif;
+    font-size:70px;
+    text-shadow: 3px 2px 6px black;
+    
+}
+
+.img-sobre{
+    position: relative;
+    border-radius: 50%;
+    margin-top: 20px;
+    width: 220px;
+    height: 200px;
+    opacity: 0.7;
+    box-shadow: 3px 4px 10px black;
+    
+   
+}
+
+.img-sobre:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+.caixa-img{
+    margin-top: 110px;
+    
+    
+   
+}
+.caixa-sobre p{
+    text-align: center;
+    font-size: 20px;
+}
+.caixa-sobre .nome{
+    padding-top: 20px;
+    font-size: 30px;
+    color: #ffcc00;
+    text-shadow: 3px 2px 4px black;
+}
+
+
+
+/*RODAPE*/
+footer .rodape{
+    height: 180px;
+    width: 100%;
+    background: rgb(77, 166, 255);
+    box-shadow: 15px 10px 10px black;
+    margin-top: 670px;
+}
+footer .rodape p{
+    text-align: center;
+    padding-top: 60px;
+    font-size: 18px;
+    color: gray;
+}
+ 
+ 
+
