@@ -25,9 +25,7 @@
         
         <title>Web Quiz</title>
     </head>
-    <body background="img/OurPlanet.jpg">
-
-                
+    <body background="img/OurPlanet.jpg">                
                        
         <%@include file= "WEB-INF/jspf/navbar.jspf"%>                 
                      

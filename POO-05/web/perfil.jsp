@@ -32,6 +32,7 @@
         grade = 100.0 * ((double)(count) / Quiz.getTest().size());
         
         
+        
         String grade1 = Double.toString(grade);
        
         Users u = new Users();
