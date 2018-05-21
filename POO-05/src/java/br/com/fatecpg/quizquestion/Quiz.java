@@ -1,17 +1,10 @@
 package br.com.fatecpg.quizquestion;
 
-
-    
 import java.util.ArrayList;
-
-import java.util.Collections;
-import java.util.List;
-
-
 
 public class Quiz {
     private static Questions[] questionList = new Questions[]{
-       
+        
         new Questions("Qual a estrela mais próxima da Terra?", "Sol", new String[]{"Sol", "Sirius", "Alpha Centauri"}),
         new Questions("O maior planeta do Sistema Solar?", "Júpiter", new String[]{"Júpiter", "Saturno", "Netuno"}),
         new Questions("O ano da primeira chegada do homem à Lua?", "1969", new String[]{"1952", "1977", "1969"}),
@@ -27,37 +20,62 @@ public class Quiz {
         new Questions("Estrela do Pólo Norte?", "Polaris", new String[]{"Vega", "Canopus", "Polaris"}),
         new Questions("Corpos massivos,que são capazes de sugar tudo,inclusive a luz?", "Buracos Negros", new String[]{"Estrela da Morte", "Sua mãe", "Buracos Negros"}),
         new Questions("Cometa conhecido pela sua passagem na Terra em 1986?", "Halley", new String[]{"Halley", "Halle/Bope", "Ison"}),
- 
+        
     };
     
-        
-    private static ArrayList<Questions> test; 
-
+    public static ArrayList<Quiz> topTenQuizzes = new ArrayList<>();
     
-    public static ArrayList<Questions> getTest() {
+    private ArrayList<Questions> test;
+    private double grade;
+    private Users user;
+    
+    public Quiz(Users user) {
+        this.user = user;
         
         test = new ArrayList<>(10);
-       
-        
-        List <Integer>num = new ArrayList<Integer>(15);
-        for (int i=0; i<15; i++){
-            num.add(i);
-            
-        }
-        
-        Collections.shuffle(num);
-        
-        
         for (int i=0; i<10; i++){
-           
-            test.add(questionList[num.get(i)]);
-        }      
-               
-        
-        
-        return Quiz.test;
+            int randomIndex;
+            do {
+                randomIndex = (int)(Math.random() * questionList.length);
+            }while (test.contains(questionList[randomIndex]));
+            test.add(questionList[randomIndex]);
+        }
+    }
+
+    public Users getUser(){
+        return this.user;
+    }
+    public double getGrade() {
+        return grade;
+    }
+    
+    public void finishTest(double grade){
+        this.grade = grade;       
+                       
+        int size = topTenQuizzes.size();
+        if (size==0){
+            topTenQuizzes.add(this);
+        } 
+        else {
+            int i = size;
+            
+            while (i>0 && this.grade>topTenQuizzes.get(i-1).grade){
+                i--;
+            }
+            
+            if (i<10){
+                topTenQuizzes.add(i, this);
+            }
+            
+            if (topTenQuizzes.size()>10){
+                topTenQuizzes.remove(10);
+            }
+        }
+    }
+
+    public ArrayList<Questions> getTest() 
+    { 
+        return this.test;
     }
 
 }
-    
-

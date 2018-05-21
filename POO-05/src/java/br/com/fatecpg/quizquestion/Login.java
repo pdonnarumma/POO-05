@@ -1,7 +1,6 @@
 package br.com.fatecpg.quizquestion;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,23 +16,24 @@ public class Login extends HttpServlet {
         
         response.setContentType("text/html;charset=UTF-8");
         
-        PrintWriter out=response.getWriter();
+        
 		
 		
 		String name=request.getParameter("name");
 		
 		
-		if(name != null){
+		if(name == null || name.equals("")){
                  
-                 response.sendRedirect("perfil.jsp");
-		 HttpSession session=request.getSession();
-		 session.setAttribute("name",name);
+                 response.sendRedirect("login.jsp");
+                 
 		}
 		else{
 			
-			response.sendRedirect("login.jsp");
+			     response.sendRedirect("perfil.jsp");
+		 HttpSession session=request.getSession();
+		 session.setAttribute("name",name);
 		}
-		out.close();
+		
     }
 
 }

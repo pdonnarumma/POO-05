@@ -32,7 +32,7 @@
         <br><br><br>    
 
         <div style = "max-width: 880px; margin: 0 auto; background-color: rgb(227, 252, 225); height: 50%; padding: 60px 60px; text-align: center;">
-      
+        <h1>Ultimos Testes</h1>
           
         <center>        
         <% if(idUsers.getUsersList().size() <= 10){
@@ -49,7 +49,7 @@
                 <td><%=i%></td>
                 
                 <td><%=idUsers.getUsersList().get(i).getNome()%></td>
-                <td><%=idUsers.getUsersList().get(i).getPontuaçao()%></td> 
+                <td><%=idUsers.getUsersList().get(i).getPontuacao()%></td> 
                                 
             </tr>
             <%}%>
@@ -70,7 +70,7 @@
                 <td><%=i%></td>
                 
                 <td><%=idUsers.getUsersList().get(i).getNome()%></td>
-                <td><%=idUsers.getUsersList().get(i).getPontuaçao()%></td> 
+                <td><%=idUsers.getUsersList().get(i).getPontuacao()%></td> 
                                 
             </tr>
             <%}%>

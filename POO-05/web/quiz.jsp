@@ -1,10 +1,16 @@
+<%@page import="br.com.fatecpg.quizquestion.Login"%>
+<%@page import="br.com.fatecpg.quizquestion.Logout"%>
 <%@page import="br.com.fatecpg.quizquestion.Quiz"%>
 <%@page import="br.com.fatecpg.quizquestion.Questions"%>
+<%@page import="br.com.fatecpg.quizquestion.Users"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<% 
+<%    
+
    boolean logado = false;
    String name=(String)session.getAttribute("name");
+   Users user = (Users)session.getAttribute(name);
+
    if (name != null)
    {
        logado = true;
@@ -31,14 +37,21 @@
         <center>
         <h1>Quiz</h1>
         <%if(logado){%>
-        
+
         <form action="perfil.jsp">
-            <%for(int i = 0; i < Quiz.getTest().size(); i++){%>
-            <%Questions q = Quiz.getTest().get(i);%>  
-            <h2><%=q.getQuestion()%></h2>
-            <input type="radio" name="<%=q.getQuestion()%>" value="<%=q.getAlternatives()[0]%>"/><%=q.getAlternatives()[0]%>            
-            <input type="radio" name="<%=q.getQuestion()%>" value="<%=q.getAlternatives()[1]%>"/><%=q.getAlternatives()[1]%>            
-            <input type="radio" name="<%=q.getQuestion()%>" value="<%=q.getAlternatives()[2]%>"/><%=q.getAlternatives()[2]%>            
+            <%
+                Quiz q = new Quiz(user);
+                request.getSession().removeAttribute("quiz");
+                request.getSession().setAttribute("quiz", q);
+               
+            %>
+
+            <%for(int i = 0; i < q.getTest().size(); i++){%>
+            <%Questions qt = q.getTest().get(i);%>  
+            <h2><%=qt.getQuestion()%></h2>
+            <input type="radio" name="<%=qt.getQuestion()%>" value="<%=qt.getAlternatives()[0]%>"/><%=qt.getAlternatives()[0]%> </br>           
+            <input type="radio" name="<%=qt.getQuestion()%>" value="<%=qt.getAlternatives()[1]%>"/><%=qt.getAlternatives()[1]%> </br>           
+            <input type="radio" name="<%=qt.getQuestion()%>" value="<%=qt.getAlternatives()[2]%>"/><%=qt.getAlternatives()[2]%> </br>           
             <%}%>
             <hr>
             <input type="submit" name="tested" value="Enviar">

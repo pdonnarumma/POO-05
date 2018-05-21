@@ -1,5 +1,7 @@
 <%@page import="br.com.fatecpg.quizquestion.Login"%>
 <%@page import="br.com.fatecpg.quizquestion.Logout"%>
+<%@page import="br.com.fatecpg.quizquestion.Quiz"%>
+<%@page import="br.com.fatecpg.quizquestion.Users"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <% 
@@ -27,9 +29,26 @@
         <br><br><br>
         <br><br><br>    
 
-       <div style = "max-width: 880px; margin: 0 auto; background-color: rgb(227, 252, 225); height: 50%; padding: 60px 60px; text-align: center;">
-        <center><h1>Hello World!</h1></center>
-       </div>
+        <div style = "max-width: 880px; margin: 0 auto; background-color: rgb(227, 252, 225); height: 50%; padding: 60px 60px; text-align: center;">
+        <h1>Ranking</h1>
+          
+        <center>        
+        
+        <table border="1">
+            <tr><th>Indice</th><th>Nome</th><th>Pontuação</th></tr>
+            <%for(int i = 0; i <= Quiz.topTenQuizzes.size(); i++){%> 
+            <tr>
+                <td><%=i%></td>
+                
+                <td><%=Quiz.topTenQuizzes.get(i).getUser().getNome()%></td>
+                <td><%=Quiz.topTenQuizzes.get(i).getUser().getPontuacao()%></td> 
+                                
+            </tr>
+            <%}%>
+        </table>
+       
+                        
+        </div>
 
 
 

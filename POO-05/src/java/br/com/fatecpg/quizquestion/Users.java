@@ -5,8 +5,9 @@ package br.com.fatecpg.quizquestion;
 public class Users {
   
     private String nome;
-    private String pontuaçao;
+    private String pontuacao;
     
+        
     public String getNome() {
         return nome;
     }
@@ -15,13 +16,14 @@ public class Users {
         this.nome = nome;
     }
 
-    public String getPontuaçao() {
-        return pontuaçao;
+    public String getPontuacao() {
+        return pontuacao;
     }
 
-    public void setPontuaçao(String pontuaçao) {
-        this.pontuaçao = pontuaçao;
+    public void setPontuacao(String pontuacao) {
+        this.pontuacao = pontuacao;
     }
     
     
 }
+

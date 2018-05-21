@@ -9,6 +9,7 @@
 <% 
    boolean logado = false;
    String name=(String)session.getAttribute("name");
+
    if (name != null)
    {
        logado = true;
@@ -18,18 +19,20 @@
    double grade = 0;
    if(request.getParameter("tested") != null)
    {
+        Quiz last = (Quiz)session.getAttribute("quiz");
         tested = true;
         int count = 0;
-        for(int i = 0; i < Quiz.getTest().size(); i++)
+        for(int i = 0; i < 10; i++)
         {
-            Questions q = Quiz.getTest().get(i);
-            String p = request.getParameter(q.getQuestion());
-            if(q.getAswer().equals(p))
+            Questions qq = last.getTest().get(i);
+            String p = request.getParameter(qq.getQuestion());
+            if(qq.getAswer().equals(p))
             {
                 count++;
             }
+            
         }
-        grade = 100.0 * ((double)(count) / Quiz.getTest().size());
+        grade = 100.0 * ((double)(count) / last.getTest().size());
         
         
         
@@ -37,7 +40,7 @@
        
         Users u = new Users();
         u.setNome(name);
-        u.setPontuaçao(grade1);       
+        u.setPontuacao(grade1);       
         
                         
         idUsers.getUsersList().add(u); 
